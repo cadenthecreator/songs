@@ -45,3 +45,5 @@ local function audioright()
         sleep()
     end
 end
+
+parallel.waitForAll(receive,audioleft,audioright)
