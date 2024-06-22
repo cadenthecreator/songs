@@ -20,7 +20,7 @@ local function audioleft()
     local speaker = peripher.wrap("left") or peripheral.find("speaker")
     while true do
         if data then
-            if data.proto = "cadenMono" then
+            if data.proto == "cadenMono" then
                 local buffer = decoder()
                 while not speaker.playAudio(buffer) do
                     os.pullEvent("speaker_audio_empty")
@@ -35,7 +35,7 @@ local function audioright()
     local speaker = peripher.wrap("right") or peripheral.find("speaker")
     while true do
         if data then
-            if data.proto = "cadenMono" then
+            if data.proto == "cadenMono" then
                 local buffer = decoder()
                 while not speaker.playAudio(buffer) do
                     os.pullEvent("speaker_audio_empty")
